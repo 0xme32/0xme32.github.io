@@ -1,3 +1,7 @@
-## 200 OK
+---
+layout: home
+---
+
+## 200
 
 > On development
