@@ -1,0 +1,6 @@
+<nav>
+  {% for nav_page in site.nav_pages %}
+    {% assign page_obj = site.pages | where: "path", nav_page | first %}
+    <a href="{{ page_obj.url }}">{{ page_obj.title }}</a>
+  {% endfor %}
+</nav>
