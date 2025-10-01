@@ -1,0 +1,20 @@
+# .github/workflows/debug.yml
+name: Debug with SSHX
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 0/6 * * *"   
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Start SSH session
+        run: curl -sSf https://sshx.io/get | sh -s run
+
+
+
